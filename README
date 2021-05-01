@@ -1,0 +1,14 @@
+
+git clone https://github.com/Mr-Bossman/imxrt-linux-buildroot.git
+
+cd imxrt-linux-buildroot
+
+git submodule update --init
+
+cd buildroot
+
+make BR2_EXTERNAL=$PWD/../ IMXRT_defconfig
+
+make
+
+sudo dd if=output/images/sdcard.img of=/dev/sdX
