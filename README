@@ -7,7 +7,7 @@ git submodule update --init
 
 cd buildroot
 
-make BR2_IMXRT_EXTERNAL=$PWD/../ IMXRT_defconfig
+make BR2_EXTERNAL=$PWD/../ IMXRT_defconfig
 
 make
 
