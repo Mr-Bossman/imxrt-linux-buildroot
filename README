@@ -11,4 +11,4 @@ make BR2_EXTERNAL=$PWD/../ IMXRT_defconfig
 
 make
 
-sudo dd if=output/images/sdcard.img of=/dev/sdX
+sudo dd if=output/images/sdcard.img of=/dev/sdX ; sync

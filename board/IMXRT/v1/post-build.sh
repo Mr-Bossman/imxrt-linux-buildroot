@@ -1,5 +1,4 @@
 #!/bin/sh
-#grep -q "GADGET_SERIAL" "${TARGET_DIR}/etc/inittab" \
-	|| echo '/dev/ttyGS0::respawn:/sbin/getty -L  /dev/ttyGS0 0 vt100 # GADGET_SERIAL' >> "${TARGET_DIR}/etc/inittab"
-#grep -q "ubi0:persist" "${TARGET_DIR}/etc/fstab" \
-	|| echo 'ubi0:persist	/root		ubifs	defaults	0	0' >> "${TARGET_DIR}/etc/fstab"
+mkimage -A arm -O linux -T kernel -C none -a 0x80008000 -e 0x80008000 -n "Linux kernel" -d output/images/Image output/images/uImage
+mkimage -A arm -O linux -T ramdisk -C none -n "Root Filesystem" -d output/images/rootfs.cpio.uboot output/images/initramfs
+./support/scripts/genimage.sh $2 $3
