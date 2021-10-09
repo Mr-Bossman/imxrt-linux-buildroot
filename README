@@ -12,3 +12,8 @@ make BR2_EXTERNAL=$PWD/../ IMXRT_defconfig
 make
 
 sudo dd status=progress bs=4M if=output/images/sdcard.img of=/dev/sdX ; sync
+
+
+is there mmu less bash, and uboot needs to set console to ttyLP0 not ttyS0
+
+CONFIG_BOOTCOMMAND="setenv bootargs console=ttyLP0 root=/dev/mmcblk0p2 rw earlycon;load mmc 0:1 0x80800000 imxrt1050-evk.dtb;load mmc 0:1 0x80000000 uImage;bootm 0x80000000 - 0x80800000"
