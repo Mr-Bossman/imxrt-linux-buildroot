@@ -4,10 +4,8 @@
 ::sysinit:/bin/mkdir -p /dev/pts
 ::sysinit:/bin/mkdir -p /dev/shm
 ::sysinit:/bin/mount -a
-::sysinit:/bin/hostname -F /etc/hostname
+::sysinit:/sbin/swapon -a
 console::respawn:/bin/sh
-#console::respawn:/sbin/getty -n -L -l /loginroot.sh console 0 vt100
 ::ctrlaltdel:/sbin/reboot
-::shutdown:/etc/init.d/rcK
 ::shutdown:/sbin/swapoff -a
 ::shutdown:/bin/umount -a -r
