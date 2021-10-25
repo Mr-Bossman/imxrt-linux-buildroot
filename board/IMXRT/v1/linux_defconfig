@@ -47,7 +47,7 @@ CONFIG_HZ_250=y
 CONFIG_FORCE_MAX_ZONEORDER=14
 CONFIG_PARAVIRT=y
 # CONFIG_ATAGS is not set
-CONFIG_CMDLINE="console=ttyS0 root=/dev/mmcblk0p2 rw earlycon rootwait"
+CONFIG_CMDLINE="console=ttyLP0 root=/dev/mmcblk0p2 rw earlycon rootwait"
 # CONFIG_GCC_PLUGINS is not set
 CONFIG_BLK_DEV_BSGLIB=y
 CONFIG_BLK_DEV_INTEGRITY=y
