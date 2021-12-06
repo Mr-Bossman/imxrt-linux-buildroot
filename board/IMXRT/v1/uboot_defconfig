@@ -20,7 +20,7 @@ CONFIG_SPL=y
 CONFIG_DISTRO_DEFAULTS=y
 CONFIG_SYS_LOAD_ADDR=0x20002000
 CONFIG_SPI_BOOT=y
-CONFIG_BOOTCOMMAND="setenv bootargs console=ttyLP0 root=/dev/mmcblk0p2 rw earlycon rootwait;bootm 0x6030D800 - 0x6030C000"
+CONFIG_BOOTCOMMAND="setenv bootargs console=ttyLP0 root=/dev/mtdblock0 rw earlycon rootwait;bootm 0x6008D800 - 0x6008C000"
 CONFIG_SYS_CONSOLE_ENV_OVERWRITE=y
 # CONFIG_DISPLAY_CPUINFO is not set
 CONFIG_SPL_BOARD_INIT=y
