@@ -11,4 +11,4 @@ make BR2_EXTERNAL=$PWD/../ IMXRT_defconfig
 
 make
 
-sudo dd status=progress oflag=sync bs=4k if=output/images/sdcard.img of=/dev/sdX; sync
+sudo dd status=progress oflag=sync bs=4k if=output/images/nor.bin of=/dev/sdX; sync
