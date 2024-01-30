@@ -1,0 +1,3 @@
+CONFIG_IMX_CONFIG="board/freescale/imxrt1050-evk/imximage-nor.cfg"
+CONFIG_USE_BOOTCOMMAND=y
+CONFIG_BOOTCOMMAND="setenv bootargs console=ttyLP0 root=/dev/mtdblock0 rw earlycon rootwait;bootm 0x6008D800 - 0x6008C000"
