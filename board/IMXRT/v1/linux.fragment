@@ -13,3 +13,4 @@ CONFIG_MTD_PLATRAM=y
 CONFIG_MTD_SLRAM=y
 CONFIG_MTD_PHRAM=y
 CONFIG_MTD_BLOCK2MTD=y
+CONFIG_CMDLINE="console=ttyLP0 root=/dev/mtdblock0 rw earlycon rootwait"
